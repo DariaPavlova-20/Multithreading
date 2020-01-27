@@ -1,0 +1,28 @@
+• AtomicBoolean
+• AtomicInteger
+• AtomicLong
+• AtomicReference
+Atomic-классы для boolean, integer, long и ссылок на объекты.
+Классы этой группы содержат метод compareAndSet, принимающий 2 аргумента : предполагаемое текущее и новое значения. Метод устанавливает объекту новое значение, если текущее равно предполагаемому, и возвращает true. Если текущее значение изменилось, то метод вернет false и новое значение не будет установлено.
+Кроме этого, классы имеют метод getAndSet, который безусловно устанавливает новое значение и возвращает старое.
+Классы AtomicInteger и AtomicLong имеют также методы инкремента/декремента/добавления нового значения.
+
+
+• AtomicIntegerArray
+• AtomicLongArray
+• AtomicReferenceArray
+Atomic-классы для массивов integer, long и ссылок на объекты.
+Элементы массивов могут быть изменены атомарно.
+
+
+• AtomicIntegerFieldUpdater
+• AtomicLongFieldUpdater
+• AtomicReferenceFieldUpdater
+Atomic-классы для обновления полей по их именам с использованием reflection.
+Смещения полей для CAS операций определяется в конструкторе и кэшируются. Сильного падения производительности из-за reflection не наблюдается.
+
+
+• AtomicStampedReference
+• AtomicMarkableReference	Atomic-классы для реализации некоторых алгоритмов, (точнее сказать, уход от проблем при реализации алгоритмов).
+Класс AtomicStampedReference получает в качестве параметров ссылку на объект и int значение.
+Класс AtomicMarkableReference получает в качестве параметров ссылку на объект и битовый флаг (true/false).
